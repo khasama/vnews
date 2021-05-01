@@ -9,7 +9,7 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vpBanner"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="250dp">
 
         </androidx.viewpager.widget.ViewPager>
     </RelativeLayout>
