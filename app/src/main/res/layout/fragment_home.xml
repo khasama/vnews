@@ -8,19 +8,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="10">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
             android:background="#dfdfdf"
             android:id="@+id/BannerLayout">
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/vpBanner"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="match_parent">
 
             </androidx.viewpager.widget.ViewPager>
         </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:background="#DDDDDD">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Có gì Hot ??"
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvTinMoi"
+                android:padding="7dp"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>
