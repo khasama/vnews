@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawerlayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#0ff">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:weightSum="12"
+                android:background="#01b2b2">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/logo"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2" />
+                <RelativeLayout
+                    android:layout_weight="8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/etFind"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/design_find_top"
+                        android:hint="Bạn cần tìm gì" />
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignEnd="@id/etFind"
+                        android:src="@drawable/ic_search"
+                        />
+                </RelativeLayout>
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="?android:selectableItemBackground"
+                    android:src="@drawable/ic_menu"
+                    android:scaleType="fitCenter"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:onClick="openMenu" />
+
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Realme C25 ra mắt tại VN: Thiết kế trẻ trung, cụm 3 camera 48MP, pin khủng 6000mAh, giá từ 4.69 triệu đồng"
+                        android:textSize="25sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:id="@+id/tvTitleTin"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="genk.vn - 15 phút trước"
+                        android:textColor="#5A5858"
+                        android:gravity="right"
+                        android:id="@+id/tvNguonNgay"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="7dp">
+                        <WebView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/wvContent"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Có thể bạn quan tâm"
+                            android:textColor="#000"
+                            android:textSize="18sp"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rvTinLienQuan"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nvMenu"
+            android:layout_gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

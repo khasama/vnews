@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.vnews.Activity.ReadActivity;
 import com.example.vnews.R;
 import com.example.vnews.modelJ.News;
 import com.squareup.picasso.Picasso;
@@ -67,10 +68,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ItemHolder>{
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent intent = new Intent(context, ThongTinPhimActivity.class);
-//                    intent.putExtra("idPhim", String.valueOf(arrayPhimsearch.get(getPosition()).getID()));
-//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    context.startActivities(new Intent[]{intent});
+                    Intent intent = new Intent(context, ReadActivity.class);
+                    intent.putExtra("idTin", String.valueOf(arrayNews.get(getPosition()).getID()));
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivities(new Intent[]{intent});
                 }
             });
         }
