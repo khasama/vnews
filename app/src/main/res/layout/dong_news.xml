@@ -3,73 +3,85 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="12"
         android:layout_marginBottom="7dp"
         android:background="#fff"
-        android:padding="7dp">
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="12">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="7"
+            android:layout_weight="6"
+            android:orientation="vertical"
             android:paddingLeft="7dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
                 <TextView
+                    android:id="@+id/tvNguon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="genk.vn"
-                    android:id="@+id/tvNguon"
-                    android:textColor="#078C8C"/>
+                    android:textColor="#078C8C" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:text="|"
                     android:textColor="#000"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <TextView
+                    android:id="@+id/tvLoaiTin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Công nghệ"
                     android:layout_marginLeft="5dp"
-                    android:id="@+id/tvLoaiTin"
+                    android:ellipsize="end"
                     android:maxLines="1"
-                    android:ellipsize="end"/>
+                    android:text="Công nghệ" />
             </LinearLayout>
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Chạy 2 ứng dụng song song trên một màn hình"
-                android:textSize="15sp"
-                android:textColor="#000"
-                android:maxLines="2"
-                android:ellipsize="end"
                 android:id="@+id/tvTitle"
-                android:layout_marginBottom="5dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="5dp"
+                android:text="Chạy 2 ứng dụng song song trên một màn hình"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
             <TextView
+                android:id="@+id/tvNgayDang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2 ngày trước"
-                android:id="@+id/tvNgayDang"/>
+                android:padding="5dp"
+                android:text="2 ngày trước" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"
+            android:layout_weight="6"
             android:padding="7dp">
+
             <ImageView
+                android:id="@+id/ivAnhMH"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/ivAnhMH"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

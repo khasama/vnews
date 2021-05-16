@@ -1,13 +1,13 @@
 package com.example.vnews.Activity
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.example.vnews.Fragment.LoginFragment
 import com.example.vnews.R
 import com.example.vnews.adapterJ.MainVpAdapter
 import com.example.vnews.fragmentJ.*
@@ -15,9 +15,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 
 
-
 class MainActivity : AppCompatActivity() {
-
     lateinit var tabLayout: TabLayout
     lateinit var viewPager: ViewPager
     lateinit var nvMenu: NavigationView
@@ -30,8 +28,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        var mainVpAdapter : MainVpAdapter =
-            MainVpAdapter(supportFragmentManager, FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
+        var mainVpAdapter: MainVpAdapter =
+            MainVpAdapter(
+                supportFragmentManager,
+                FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+            )
         mainVpAdapter.addFragment(FragmentHome(), "")
         mainVpAdapter.addFragment(FragmentTechnical(), "")
         mainVpAdapter.addFragment(FragmentHotnews(), "")
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         nvMenu = findViewById(R.id.nvMenu)
         drlayout = findViewById(R.id.drawerlayout)
     }
+
 
     fun openMenu(view: View?) {
         drlayout.openDrawer(GravityCompat.END)
