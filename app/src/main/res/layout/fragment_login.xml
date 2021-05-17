@@ -16,14 +16,17 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:textSize="20sp"
-        android:hint="Tài khoản"/>
+        android:hint="Tài khoản"
+        android:id="@+id/etTdn"/>
     <EditText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:hint="Mật khẩu"/>
+        android:hint="Mật khẩu"
+        android:password="true"
+        android:id="@+id/etPass"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,5 +34,6 @@
         android:textSize="20sp"
         android:text="ĐĂNG NHẬP"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:id="@+id/btnLogin"/>
 </LinearLayout>

@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 
@@ -25,12 +26,31 @@ public class FragmentProfile extends Fragment {
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    Button btnLogout;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         Log.d("asd", "profile");
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        anhXa(view);
+        init();
         return view;
+    }
+
+    private void init() {
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editor.clear();
+                editor.commit();
+                Intent intent = new Intent(mContext, MainActivity.class);
+                mContext.startActivities(new Intent[]{intent});
+            }
+        });
+    }
+
+    private void anhXa(View view) {
+        btnLogout = view.findViewById(R.id.btnLogout);
     }
 
     @Override
@@ -58,4 +78,6 @@ public class FragmentProfile extends Fragment {
             mContext.startActivities(new Intent[]{intent});
         }
     }
+
+
 }
