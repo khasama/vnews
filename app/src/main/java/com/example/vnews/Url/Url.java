@@ -11,6 +11,7 @@ public class Url {
     public static String Tinlienquan = domain + "api/tinlienquan.php?idLoaiTin=";
     public static String urlRegister = domain + "api/register.php";
     public static String urlLogin = domain + "api/login.php";
+    public static String urlShowCmt = domain + "api/show_cmt.php?idTinTuc=";
     public static String getTechNews(String idLoaitin){
         String url = domain+"api/congnghe.php?idLoaiTin="+idLoaitin;
         return url;

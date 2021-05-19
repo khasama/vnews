@@ -13,13 +13,6 @@
             android:layout_height="152dp"
             android:orientation="vertical"
             android:background="#bbb">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:textColor="#fff"
-                android:backgroundTint="#000"
-                android:id="@+id/btnLogout"/>
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -192,6 +185,28 @@
                 android:text="Điều khoản sử dụng"
                 android:textSize="18sp"
                 android:background="#FFFFFF"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:id="@+id/llLogout">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_logout"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="fitXY"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Đăng xuất"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

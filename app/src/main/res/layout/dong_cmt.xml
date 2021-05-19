@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="7dp"
+        android:background="#EAEAEA">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:id="@+id/ivAvatar"
+            android:layout_marginRight="7dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="12">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="wrap_content"
+                    android:text="khavl741953"
+                    android:textColor="#166D7A"
+                    android:textSize="18sp"
+                    android:id="@+id/tvUserName"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginRight="7dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:text="12 tháng trước"
+                    android:textColor="#71A871"
+                    android:textSize="14sp"
+                    android:id="@+id/tvDate"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textAlignment="textEnd"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:id="@+id/tvContent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
