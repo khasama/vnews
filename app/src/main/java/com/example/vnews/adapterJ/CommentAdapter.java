@@ -49,6 +49,10 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ItemHold
         return arrayCmt.size();
     }
 
+    public void clear(){
+        arrayCmt.clear();
+    }
+
     public class ItemHolder extends RecyclerView.ViewHolder{
         public TextView tvUserName, tvDate, tvContent;
         public ImageView ivAvatar;

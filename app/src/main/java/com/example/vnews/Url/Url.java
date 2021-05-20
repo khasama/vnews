@@ -12,6 +12,7 @@ public class Url {
     public static String urlRegister = domain + "api/register.php";
     public static String urlLogin = domain + "api/login.php";
     public static String urlShowCmt = domain + "api/show_cmt.php?idTinTuc=";
+    public static String sendComment = domain + "api/send_cmt.php";
     public static String getTechNews(String idLoaitin){
         String url = domain+"api/congnghe.php?idLoaiTin="+idLoaitin;
         return url;
