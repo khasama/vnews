@@ -30,7 +30,8 @@
                 <RelativeLayout
                     android:layout_weight="8"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/rlSearch">
 
                     <EditText
                         android:id="@+id/etFind"
@@ -41,6 +42,7 @@
                         android:layout_marginRight="3dp"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/design_find_top"
+                        android:clickable="false"
                         android:hint="Bạn cần tìm gì" />
                     <ImageView
                         android:layout_marginTop="15dp"
@@ -48,8 +50,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_alignEnd="@id/etFind"
-                        android:src="@drawable/ic_search"
-                        />
+                        android:src="@drawable/ic_search"/>
                 </RelativeLayout>
                 <ImageButton
                     android:layout_width="0dp"

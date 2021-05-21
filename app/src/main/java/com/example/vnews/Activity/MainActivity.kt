@@ -1,8 +1,11 @@
 package com.example.vnews.Activity
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import android.widget.EditText
+import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -15,13 +18,13 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 
 
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var tabLayout: TabLayout
     lateinit var viewPager: ViewPager
     lateinit var nvMenu: NavigationView
     lateinit var drlayout: DrawerLayout
+    lateinit var etFind: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,6 +47,11 @@ class MainActivity : AppCompatActivity() {
         tabLayout.getTabAt(2)?.setIcon(R.drawable.ic_fire)
         tabLayout.getTabAt(3)?.setIcon(R.drawable.ic_compass)
         tabLayout.getTabAt(4)?.setIcon(R.drawable.ic_user)
+
+        etFind.setOnClickListener{
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun anhXa() {
@@ -51,9 +59,12 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.myviewpager)
         nvMenu = findViewById(R.id.nvMenu)
         drlayout = findViewById(R.id.drawerlayout)
+        etFind = findViewById(R.id.etFind)
     }
 
     fun openMenu(view: View?) {
         drlayout.openDrawer(GravityCompat.END)
+
     }
 }
+

@@ -50,6 +50,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ItemHolder>{
         return arrayNews.size();
     }
 
+    public void clear() { arrayNews.clear(); }
+
     public class ItemHolder extends RecyclerView.ViewHolder{
         public ImageView AnhMH;
         public TextView Title;

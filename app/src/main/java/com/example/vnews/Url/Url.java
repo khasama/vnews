@@ -1,7 +1,5 @@
 package com.example.vnews.Url;
 
-import android.webkit.WebSettings;
-
 public class Url {
     public static String domain = "http://tnews.ga/";
     public static String Banner = domain + "api/slide.php";
@@ -13,6 +11,7 @@ public class Url {
     public static String urlLogin = domain + "api/login.php";
     public static String urlShowCmt = domain + "api/show_cmt.php?idTinTuc=";
     public static String sendComment = domain + "api/send_cmt.php";
+    public static String urlSearch = domain + "api/search.php?q=";
     public static String getTechNews(String idLoaitin){
         String url = domain+"api/congnghe.php?idLoaiTin="+idLoaitin;
         return url;
