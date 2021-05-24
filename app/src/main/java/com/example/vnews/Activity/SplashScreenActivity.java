@@ -22,10 +22,10 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         ivLogo = findViewById(R.id.ivLogo);
-        topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
-        topAnimation.setDuration(1500);
+//        topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+//        topAnimation.setDuration(1500);
 
-        ivLogo.setAnimation(topAnimation);
+//        ivLogo.setAnimation(topAnimation);
 
 
         new Handler().postDelayed(new Runnable() {
