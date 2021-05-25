@@ -4,8 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import android.widget.RelativeLayout
-import android.widget.Toast
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -13,7 +12,9 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.vnews.R
 import com.example.vnews.adapterJ.MainVpAdapter
+import com.example.vnews.adapterJ.MenuRightAdapter
 import com.example.vnews.fragmentJ.*
+import com.example.vnews.modelJ.MenuRight
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 
@@ -25,6 +26,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var nvMenu: NavigationView
     lateinit var drlayout: DrawerLayout
     lateinit var etFind: EditText
+
+    lateinit var arrayMenu: ArrayList<MenuRight>
+    lateinit var menuRightAdapter: MenuRightAdapter
+    lateinit var listViewMenu: ListView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -52,6 +57,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SearchActivity::class.java)
             startActivity(intent)
         }
+
+        GetMenuLeft()
+    }
+
+    private fun GetMenuLeft() {
+        arrayMenu.add(MenuRight("Di động", "https://img.icons8.com/wired/64/000000/multiple-smartphones.png"))
+        arrayMenu.add(MenuRight("Máy tính", "https://img.icons8.com/pastel-glyph/64/000000/laptop-computer--v2.png"))
+        arrayMenu.add(MenuRight("Thiết bị công nghệ", "https://img.icons8.com/ios/64/000000/wearable-technology.png"))
+        arrayMenu.add(MenuRight("Đời sống cộng nghệ", "https://img.icons8.com/dotty/50/000000/technology-lifestyle.png"))
+        arrayMenu.add(MenuRight("Thủ thuật", "https://img.icons8.com/ios/80/000000/magical-scroll.png"))
+        arrayMenu.add(MenuRight("Game", "https://img.icons8.com/pastel-glyph/50/000000/controller--v2.png"))
     }
 
     private fun anhXa() {
@@ -60,11 +76,15 @@ class MainActivity : AppCompatActivity() {
         nvMenu = findViewById(R.id.nvMenu)
         drlayout = findViewById(R.id.drawerlayout)
         etFind = findViewById(R.id.etFind)
+
+        listViewMenu = findViewById(R.id.listviewMenu)
+        arrayMenu = ArrayList()
+        menuRightAdapter = MenuRightAdapter(arrayMenu, applicationContext)
+        listViewMenu.setAdapter(menuRightAdapter)
     }
 
     fun openMenu(view: View?) {
         drlayout.openDrawer(GravityCompat.END)
-
     }
 }
 

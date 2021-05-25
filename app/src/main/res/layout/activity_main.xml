@@ -96,6 +96,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#fff">
+                <ListView
+                    android:id="@+id/listviewMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </ListView>
             </LinearLayout>
         </com.google.android.material.navigation.NavigationView>
     </androidx.drawerlayout.widget.DrawerLayout>
