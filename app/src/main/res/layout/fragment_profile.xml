@@ -16,8 +16,9 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/design_find_top"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:id="@+id/ivAvatar"/>
         </LinearLayout>
 
         <LinearLayout
