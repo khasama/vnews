@@ -8,8 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="7dp"
-        android:background="#EAEAEA"
+        android:padding="15dp"
+        android:background="@drawable/custom_cmt"
         android:layout_marginBottom="7dp">
         <ImageView
             android:layout_width="60dp"

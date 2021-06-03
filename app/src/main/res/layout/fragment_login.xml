@@ -44,6 +44,10 @@
         android:background="@drawable/custom_btn"
         android:text="ĐĂNG NHẬP"
         android:padding="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:textColor="#000000"
         android:textSize="15sp" />
 </LinearLayout>

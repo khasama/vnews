@@ -17,22 +17,22 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
+
                 <ImageView
                     android:id="@+id/ivAvatar"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:scaleType="fitCenter"/>
-<!--                    android:background="@drawable/img_profile"-->
+                    android:scaleType="fitCenter" />
 
             </androidx.cardview.widget.CardView>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
@@ -61,7 +61,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/chuong"
+                    android:src="@drawable/ic_twotone"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
 
@@ -84,7 +84,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/danhdau"
+                    android:src="@drawable/bookmarks"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
 
@@ -106,7 +106,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/coment"
+                    android:src="@drawable/comment"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
 
@@ -125,14 +125,28 @@
                 android:text="TÙY CHỈNH"
                 android:textSize="15sp"
                 android:textColor="@color/teal_700" />
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Xắp sếp theo chuyên mục"
-                android:textSize="13sp"
+                android:layout_marginTop="5dp"
                 android:background="#FFFFFF"
-                android:layout_marginTop="5dp"/>
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_twotone_sort_24"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Xắp sếp theo chuyên mục"
+                    android:textSize="13sp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,14 +193,41 @@
                 android:text="ỨNG DỤNG"
                 android:textSize="15sp"
                 android:textColor="@color/teal_700"/>
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Gửi phản hồi"
-                android:textSize="13sp"
+                android:layout_marginTop="5dp"
                 android:background="#FFFFFF"
-                android:layout_marginTop="5dp"/>
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_twotone_feedback_24"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Gửi phản hồi"
+                    android:textSize="13sp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_twotone_star_24"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -195,35 +236,51 @@
                 android:text="Bình chọn cho chúng tôi"
                 android:textSize="13sp"
                 android:background="#FFFFFF"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_marginTop="5dp"
-                android:text="Điều khoản sử dụng"
-                android:textSize="13sp"
-                android:background="#FFFFFF"/>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:background="#FFFFFF"
-                android:orientation="horizontal"
-                android:id="@+id/llLogout">
+                android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_logout"
+                    android:src="@drawable/ic_baseline_list_alt_24"
                     android:layout_marginLeft="10dp"
-                    android:scaleType="fitXY"/>
+                    android:layout_marginTop="5dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Điều khoản sử dụng"
+                    android:textSize="13sp"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_btn"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="Đăng xuất"
-                    android:textSize="18sp"
-                    android:layout_marginTop="5dp"/>
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
