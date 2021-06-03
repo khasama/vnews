@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_log"
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="#aaa"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo"
         android:layout_gravity="center"
         android:layout_marginTop="70dp"/>
     <EditText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_input"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:textSize="20sp"
-        android:hint="Tài khoản"
+        android:padding="10dp"
+        android:hint="  Tài khoản"
         android:id="@+id/etTdn"/>
     <EditText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:background="@drawable/bg_input"
+        android:padding="10dp"
         android:textSize="20sp"
-        android:hint="Mật khẩu"
+        android:hint="  Mật khẩu"
         android:password="true"
         android:id="@+id/etPass"/>
+
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:text="ĐĂNG NHẬP"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:id="@+id/btnLogin"/>
+        android:background="@drawable/custom_btn"
+        android:text="ĐĂNG NHẬP"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="15sp" />
 </LinearLayout>

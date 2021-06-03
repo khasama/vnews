@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -8,23 +10,35 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="152dp"
-            android:orientation="vertical"
-            android:background="#bbb">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:scaleType="fitXY"
-                android:id="@+id/ivAvatar"/>
-        </LinearLayout>
+            android:background="@drawable/img_profile"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"/>
+<!--                    android:background="@drawable/img_profile"-->
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#EDEBEB"
+            android:background="#fff"
             android:orientation="vertical">
 
             <TextView
@@ -32,9 +46,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
+                android:textColor="@color/teal_700"
                 android:text="TIN TỨC"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="15sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,18 +58,19 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:src="@drawable/chuong"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="Thông báo"
-                    android:textSize="18sp"
+                    android:textSize="13sp"
                     android:layout_marginTop="5dp"/>
             </LinearLayout>
             <LinearLayout
@@ -66,18 +81,19 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:src="@drawable/danhdau"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="Tin đã đánh dấu"
-                    android:textSize="18sp" />
+                    android:textSize="13sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,18 +103,19 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:src="@drawable/coment"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="Bình luận của tôi"
-                    android:textSize="18sp" />
+                    android:textSize="13sp" />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
@@ -106,14 +123,14 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="TÙY CHỈNH"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="15sp"
+                android:textColor="@color/teal_700" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="Xắp sếp theo chuyên mục"
-                android:textSize="18sp"
+                android:textSize="13sp"
                 android:background="#FFFFFF"
                 android:layout_marginTop="5dp"/>
             <LinearLayout
@@ -128,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="Bình luận của tôi"
-                    android:textSize="18sp"
+                    android:textSize="13sp"
                     android:layout_weight="9"/>
 
                 <Switch
@@ -147,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="Nhận thông báo mới"
-                    android:textSize="18sp"
+                    android:textSize="13sp"
                     android:layout_weight="9"/>
 
                 <Switch
@@ -160,14 +177,14 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="ỨNG DỤNG"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="15sp"
+                android:textColor="@color/teal_700"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="Gửi phản hồi"
-                android:textSize="18sp"
+                android:textSize="13sp"
                 android:background="#FFFFFF"
                 android:layout_marginTop="5dp"/>
             <TextView
@@ -176,7 +193,7 @@
                 android:padding="10dp"
                 android:layout_marginTop="5dp"
                 android:text="Bình chọn cho chúng tôi"
-                android:textSize="18sp"
+                android:textSize="13sp"
                 android:background="#FFFFFF"/>
             <TextView
                 android:layout_width="match_parent"
@@ -184,7 +201,7 @@
                 android:padding="10dp"
                 android:layout_marginTop="5dp"
                 android:text="Điều khoản sử dụng"
-                android:textSize="18sp"
+                android:textSize="13sp"
                 android:background="#FFFFFF"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -195,7 +212,7 @@
                 android:id="@+id/llLogout">
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="45dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_logout"
                     android:layout_marginLeft="10dp"
